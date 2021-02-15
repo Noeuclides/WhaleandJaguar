@@ -30,13 +30,25 @@ BASE_APPS = [
 
 LOCAL_APPS = [
     'apps.users',
+    'apps.covid_api'
 ]
 
 THIRD_APPS = [
     'rest_framework',
+    'knox'
 ]
 
 INSTALLED_APPS = BASE_APPS + LOCAL_APPS + THIRD_APPS
+
+REST_FRAMEWORK = {
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework.permissions.AllowAny'
+    # ],
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'knox.auth.TokenAuthentication',
+    ),
+    'DATETIME_FORMAT': "%m/%d/%Y %H:%M:%S",
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
