@@ -7,4 +7,5 @@ urlpatterns = [
     path('login', index),
     path('register', index),
     path('country', index),
+    path('country/daily', index),
 ]

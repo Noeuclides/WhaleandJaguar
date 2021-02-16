@@ -18,6 +18,7 @@ import Header from './layout/Header';
 import RegisterForm from './auth/RegisterForm';
 import Report from './reports/daily_report';
 import CountryReport from './reports/country_report';
+import CountryDailyReport from './reports/country_daily_report';
 
 class App extends Component {
     componentDidMount() {
@@ -32,6 +33,7 @@ class App extends Component {
                     <Switch>
                         <PrivateRoute exact path='/' component={Report} />
                         <Route exact path='/country' component={CountryReport} />
+                        <Route exact path='/country/daily' component={CountryDailyReport} />
                         <Route exact path='/register' component={RegisterForm} />
                         <Route exact path='/login' component={LoginForm} />
                     </Switch>
