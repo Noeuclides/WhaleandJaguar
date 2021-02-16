@@ -6,7 +6,8 @@ import {
   USER_LOADED,
   AUTH_ERROR,
   LOGIN_SUCCESS,
-  LOGIN_FAIL
+  LOGIN_FAIL,
+  LOGOUT_SUCCESS
 } from './types';
 
 // LOAD USER
@@ -14,7 +15,7 @@ export const loadUser = () => async (dispatch, getState) => {
   dispatch({ type: USER_LOADING });
 
   try {
-    const res = await axios.get('/auth/user', tokenConfig(getState));
+    const res = await axios.get('/api/auth/user', tokenConfig(getState));
     dispatch({
       type: USER_LOADED,
       payload: res.data
@@ -69,4 +70,12 @@ export const tokenConfig = getState => {
   }
 
   return config;
+};
+
+// LOGOUT USER
+export const logout = () => async (dispatch, getState) => {
+  await axios.post('/api/logout', null, tokenConfig(getState));
+  dispatch({
+    type: LOGOUT_SUCCESS
+  });
 };
