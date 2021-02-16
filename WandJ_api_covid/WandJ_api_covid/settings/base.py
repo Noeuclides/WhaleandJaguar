@@ -30,7 +30,8 @@ BASE_APPS = [
 
 LOCAL_APPS = [
     'apps.users',
-    'apps.covid_api'
+    'apps.covid_api',
+    'apps.frontend'
 ]
 
 THIRD_APPS = [
