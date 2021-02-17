@@ -19,20 +19,20 @@ class CountryDailyReport extends Component {
         <CountryDailyDisplay onSubmit={this.onSubmit} />
         <div className='ui right aligned divided grid' style={{ marginTop: '2rem' }}>
           <div className='center aligned two column row'>
-            <div class="column">Country</div>
-            <div class="left floated left aligned six wide column">{this.props.reports[0]}</div>
+            <div className="column">Country</div>
+            <div className="left floated left aligned six wide column">{this.props.reports[0]}</div>
           </div>
           <div className='center aligned two column row'>
-            <div class="column">Latitude</div>
-            <div class="left floated left aligned six wide column">{this.props.reports[2]}</div>
+            <div className="column">Latitude</div>
+            <div className="left floated left aligned six wide column">{this.props.reports[2]}</div>
           </div>
           <div className='center aligned two column row'>
-            <div class="column">Longitude</div>
-            <div class="left floated left aligned six wide column">{this.props.reports[3]}</div>
+            <div className="column">Longitude</div>
+            <div className="left floated left aligned six wide column">{this.props.reports[3]}</div>
           </div>
           <div className='center aligned two column row'>
-            <div class="column">Date</div>
-            <div class="left floated left aligned six wide column">{this.props.reports[4]}</div>
+            <div className="column">Date</div>
+            <div className="left floated left aligned six wide column">{this.props.reports[4]}</div>
           </div>
         </div>
       </div>

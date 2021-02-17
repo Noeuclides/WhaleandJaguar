@@ -19,44 +19,44 @@ class CountryReport extends Component {
         <CountryDisplay onSubmit={this.onSubmit} />
         <div className='ui right aligned divided grid' style={{ marginTop: '2rem' }}>
           <div className='center aligned two column row'>
-            <div class="column">Country</div>
-            <div class="left floated left aligned six wide column">{this.props.reports[0]}</div>
+            <div className="column">Country</div>
+            <div className="left floated left aligned six wide column">{this.props.reports[0]}</div>
           </div>
           <div className='center aligned two column row'>
-            <div class="column">Code</div>
-            <div class="left floated left aligned six wide column">{this.props.reports[1]}</div>
+            <div className="column">Code</div>
+            <div className="left floated left aligned six wide column">{this.props.reports[1]}</div>
           </div>
           <div className='center aligned two column row'>
-            <div class="column">Confirmed</div>
-            <div class="left floated left aligned six wide column">{this.props.reports[2]}</div>
+            <div className="column">Confirmed</div>
+            <div className="left floated left aligned six wide column">{this.props.reports[2]}</div>
           </div>
           <div className='center aligned two column row'>
-            <div class="column">Recovered</div>
-            <div class="left floated left aligned six wide column">{this.props.reports[3]}</div>
+            <div className="column">Recovered</div>
+            <div className="left floated left aligned six wide column">{this.props.reports[3]}</div>
           </div>
           <div className='center aligned two column row'>
-            <div class="column">Deaths</div>
-            <div class="left floated left aligned six wide column">{this.props.reports[4]}</div>
+            <div className="column">Deaths</div>
+            <div className="left floated left aligned six wide column">{this.props.reports[4]}</div>
           </div>
           <div className='center aligned two column row'>
-            <div class="column">Critical</div>
-            <div class="left floated left aligned six wide column">{this.props.reports[5]}</div>
+            <div className="column">Critical</div>
+            <div className="left floated left aligned six wide column">{this.props.reports[5]}</div>
           </div>
           <div className='center aligned two column row'>
-            <div class="column">Latitude</div>
-            <div class="left floated left aligned six wide column">{this.props.reports[6]}</div>
+            <div className="column">Latitude</div>
+            <div className="left floated left aligned six wide column">{this.props.reports[6]}</div>
           </div>
           <div className='center aligned two column row'>
-            <div class="column">Longitude</div>
-            <div class="left floated left aligned six wide column">{this.props.reports[7]}</div>
+            <div className="column">Longitude</div>
+            <div className="left floated left aligned six wide column">{this.props.reports[7]}</div>
           </div>
           <div className='center aligned two column row'>
-            <div class="column">Last Change</div>
-            <div class="left floated left aligned six wide column">{this.props.reports[8]}</div>
+            <div className="column">Last Change</div>
+            <div className="left floated left aligned six wide column">{this.props.reports[8]}</div>
           </div>
           <div className='center aligned two column row'>
-            <div class="column">Last Update</div>
-            <div class="left floated left aligned six wide column">{this.props.reports[9]}</div>
+            <div className="column">Last Update</div>
+            <div className="left floated left aligned six wide column">{this.props.reports[9]}</div>
           </div>
         </div>
       </div>

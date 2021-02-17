@@ -19,24 +19,24 @@ class Report extends Component {
         <ReportDisplay onSubmit={this.onSubmit} />
         <div className='ui right aligned divided grid' style={{ marginTop: '2rem' }}>
           <div className='center aligned two column row'>
-            <div class="column">Critical</div>
-            <div class="left floated left aligned six wide column">{this.props.reports[0]}</div>
+            <div className="column">Critical</div>
+            <div className="left floated left aligned six wide column">{this.props.reports[0]}</div>
           </div>
           <div className='center aligned two column row'>
-            <div class="column">Deaths</div>
-            <div class="left floated left aligned six wide column">{this.props.reports[1]}</div>
+            <div className="column">Deaths</div>
+            <div className="left floated left aligned six wide column">{this.props.reports[1]}</div>
           </div>
           <div className='center aligned two column row'>
-            <div class="column">Active</div>
-            <div class="left floated left aligned six wide column">{this.props.reports[2]}</div>
+            <div className="column">Active</div>
+            <div className="left floated left aligned six wide column">{this.props.reports[2]}</div>
           </div>
           <div className='center aligned two column row'>
-            <div class="column">Recovered</div>
-            <div class="left floated left aligned six wide column">{this.props.reports[3]}</div>
+            <div className="column">Recovered</div>
+            <div className="left floated left aligned six wide column">{this.props.reports[3]}</div>
           </div>
           <div className='center aligned two column row'>
-            <div class="column">Confirmed</div>
-            <div class="left floated left aligned six wide column">{this.props.reports[4]}</div>
+            <div className="column">Confirmed</div>
+            <div className="left floated left aligned six wide column">{this.props.reports[4]}</div>
           </div>
         </div>
       </div>
