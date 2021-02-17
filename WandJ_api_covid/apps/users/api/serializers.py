@@ -9,7 +9,6 @@ class UserSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def create(self, validated_data: dict) -> User:
-        print(f'CREATE {validated_data}')
         user = User(**validated_data)
         user.set_password(validated_data['password'])
         user.save()
@@ -28,7 +27,6 @@ class UserListSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def to_representation(self, instance: dict) -> dict:
-        print(f'INSTANCE to repr: {instance} {type(instance)}')
         return {
             'id': instance['id'],
             'first_name': instance['first_name'],

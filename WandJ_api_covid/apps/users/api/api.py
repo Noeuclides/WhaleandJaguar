@@ -20,8 +20,6 @@ class UserAPIView(APIView):
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
             user = serializer.save()
-            print(f'User Post serielized {user}')
-            print(f'Serializer data {serializer.data} {type(serializer.data)}')
             response = {
                 "user": serializer.data,
                 "token": AuthToken.objects.create(user)[1]
