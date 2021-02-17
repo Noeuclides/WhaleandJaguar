@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getCodeParams } from '../../actions/reports';
+import { getCodeParams } from '../../../actions/reports';
 import CountryForm from './country_form';
 
 class CountryDisplay extends Component {
   onSubmit = formValues => {
-    console.log(`FORM SUMBIMIT display ${JSON.stringify(formValues)}`)
     this.props.getCodeParams(formValues);
   };
 

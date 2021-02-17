@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getParams } from '../../actions/reports';
+import { getParams } from '../../../actions/reports';
 import ReportForm from './daily_report_form';
 
 class ReportDisplay extends Component {
   onSubmit = formValues => {
-    console.log(`FORM SUMBIMIT display ${JSON.stringify(formValues)}`)
     this.props.getParams(formValues);
   };
 

@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getCodeDateParams } from '../../actions/reports';
+import { getCodeDateParams } from '../../../actions/reports';
 import CountryDailyForm from './country_daily_form';
 
 class CountryDailyDisplay extends Component {
   onSubmit = formValues => {
-    console.log(`FORM SUMBIMIT display ${JSON.stringify(formValues)}`)
     this.props.getCodeDateParams(formValues);
   };
 

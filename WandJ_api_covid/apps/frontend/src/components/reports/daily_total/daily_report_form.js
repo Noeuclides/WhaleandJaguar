@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 
-class CountryForm extends Component {
+class ReportForm extends Component {
   renderField = ({ input, label, meta: { touched, error } }) => {
     return (
       <div className={`field ${touched && error ? 'error' : ''}`}>
@@ -15,7 +15,6 @@ class CountryForm extends Component {
   };
 
   onSubmit = formValues => {
-    console.log(`FORM SUMBIMIT form ${JSON.stringify(formValues)}`)
     this.props.onSubmit(formValues);
   };
 
@@ -26,7 +25,7 @@ class CountryForm extends Component {
           onSubmit={this.props.handleSubmit(this.onSubmit)}
           className='ui form error'
         >
-          <Field name='code' component={this.renderField} label='Country code to get report' />
+          <Field name='date' component={this.renderField} label='Date to get report' />
           <button className='ui primary button'>Search</button>
         </form>
       </div>
@@ -45,7 +44,7 @@ const validate = formValues => {
 };
 
 export default reduxForm({
-  form: 'CountryForm',
+  form: 'ReportForm',
   touchOnBlur: false,
   validate
-})(CountryForm);
+})(ReportForm);

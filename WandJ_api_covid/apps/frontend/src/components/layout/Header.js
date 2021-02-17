@@ -38,7 +38,13 @@ class Header extends Component {
           COVID REPORTS
         </Link>
         <Link to='/' className='item'>
-          Home
+          Report
+        </Link>
+        <Link to='/country' className='item'>
+          Country Report
+        </Link>
+        <Link to='/country/daily' className='item'>
+          Country Daily Report
         </Link>
         {isAuthenticated ? userLinks : guestLinks}
       </div>

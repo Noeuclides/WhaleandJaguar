@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { formValues } from 'redux-form';
-import { getCodeParams } from '../../actions/reports';
-import CountryDisplay from './country_display';
+import { getCodeParams } from '../../../actions/reports';
+import CountryDisplay from '../country/country_display';
 
 class CountryReport extends Component {
   componentDidMount(formValues) {
-    console.log(`QUEJESTOO!! ${JSON.stringify(this.props)}`)
     this.props.getCodeParams(formValues);
   }
 
   onSubmit = formValues => {
-    console.log(`FORM SUMBIMIT report ${JSON.stringify(formValues)}`)
     this.props.getCodeParams(formValues);
   };
 
@@ -20,7 +18,6 @@ class CountryReport extends Component {
       <div>
       <CountryDisplay onSubmit={this.onSubmit}/>
       <div className='ui relaxed divided list' style={{ marginTop: '2rem' }}>
-        { console.log(`PROPS!!! ${JSON.stringify(this.props)}`) }
           <div className='item'>
             <div className='content'>
               <a className='header'>Country</a>

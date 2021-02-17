@@ -15,7 +15,6 @@ class CountryDailyForm extends Component {
   };
 
   onSubmit = formValues => {
-    console.log(`FORM SUMBIMIT form ${JSON.stringify(formValues)}`)
     this.props.onSubmit(formValues);
   };
 
