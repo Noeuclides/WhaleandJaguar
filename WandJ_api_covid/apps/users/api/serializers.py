@@ -1,4 +1,5 @@
-from  rest_framework import serializers
+from django.contrib.auth import authenticate
+from rest_framework import serializers
 from apps.users.models import User
 
 
@@ -8,7 +9,7 @@ class UserSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def create(self, validated_data: dict) -> User:
-        print(validated_data, type(validated_data))
+        print(f'CREATE {validated_data}')
         user = User(**validated_data)
         user.set_password(validated_data['password'])
         user.save()
@@ -36,3 +37,13 @@ class UserListSerializer(serializers.ModelSerializer):
             'email': instance['email'],
             'password': instance['password'],
         }
+
+class LoginSerializer(serializers.Serializer):
+    username = serializers.CharField()
+    password = serializers.CharField()
+
+    def validate(self, data: dict) -> User:
+        user = authenticate(**data)
+        if user and user.is_active:
+            return user
+        raise serializers.ValidationError("Incorrect Credentials")

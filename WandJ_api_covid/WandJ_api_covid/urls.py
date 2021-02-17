@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('apps.users.api.urls')),
     path('covid_api/', include('apps.covid_api.api.urls')),
+    path('', include('apps.frontend.urls')),
 ]
