@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { formValues } from 'redux-form';
 import { getParams } from '../../../actions/reports';
-import ReportDisplay from './daily_report_display';
+import ReportDisplay from './DailyReportDisplay';
 
 class Report extends Component {
   componentDidMount(formValues) {

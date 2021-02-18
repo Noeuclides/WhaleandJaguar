@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getParams } from '../../../actions/reports';
-import ReportForm from './daily_report_form';
+import ReportForm from './DailyReportForm';
 
 class ReportDisplay extends Component {
   onSubmit = formValues => {

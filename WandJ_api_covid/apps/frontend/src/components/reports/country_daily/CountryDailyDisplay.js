@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getCodeDateParams } from '../../../actions/reports';
-import CountryDailyForm from './country_daily_form';
+import CountryDailyForm from './CountryDailyForm';
 
 class CountryDailyDisplay extends Component {
   onSubmit = formValues => {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { formValues } from 'redux-form';
 import { getCodeParams } from '../../../actions/reports';
-import CountryDisplay from './country_display';
+import CountryDisplay from './CountryDisplay';
 
 class CountryReport extends Component {
   componentDidMount(formValues) {

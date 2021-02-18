@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { formValues } from 'redux-form';
 import { getCodeDateParams } from '../../../actions/reports';
-import CountryDailyDisplay from './country_daily_display';
+import CountryDailyDisplay from './CountryDailyDisplay';
 
 class CountryDailyReport extends Component {
   componentDidMount(formValues) {

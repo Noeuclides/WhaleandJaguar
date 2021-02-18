@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Report from './daily_total/DailyReport';
-import ReportDisplay from './daily_total/daily_report_display';
+import ReportDisplay from './daily_total/DailyReportDisplay';
 
 class Dashboard extends Component {
   render() {

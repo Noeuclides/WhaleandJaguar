@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getCodeParams } from '../../../actions/reports';
-import CountryForm from './country_form';
+import CountryForm from './CountryForm';
 
 class CountryDisplay extends Component {
   onSubmit = formValues => {
