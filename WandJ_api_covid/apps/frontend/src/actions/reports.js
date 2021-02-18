@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_DAILY_REPORT } from './types';
+import { GET_DAILY_REPORT, GET_COUNTRY_REPORT, GET_COUNTRY_DAILY_REPORT } from './types';
 import { tokenConfig } from './auth';
 
 // GET REPORT
@@ -19,7 +19,7 @@ export const getParams = formValues => async dispatch => {
 export const getCountryReport = (params) => async (dispatch,getState) => {
   const res = await axios.get('/covid_api/country', { params: params  }, tokenConfig(getState));
   dispatch({
-    type: GET_DAILY_REPORT,
+    type: GET_COUNTRY_REPORT,
     payload: res.data
   });
 };
@@ -32,7 +32,7 @@ export const getCodeParams = formValues => async dispatch => {
 export const getCountryDailyReport = (params) => async (dispatch,getState) => {
   const res = await axios.get('/covid_api/country_daily', { params: params  }, tokenConfig(getState));
   dispatch({
-    type: GET_DAILY_REPORT,
+    type: GET_COUNTRY_DAILY_REPORT,
     payload: res.data
   });
 };
