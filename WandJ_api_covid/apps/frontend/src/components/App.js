@@ -16,9 +16,9 @@ import PrivateRoute from './common/PrivateRoute';
 import { loadUser } from '../actions/auth';
 import Header from './layout/Header';
 import RegisterForm from './auth/RegisterForm';
-import Report from './reports/daily_total/daily_report';
-import CountryReport from './reports/country/country_report';
-import CountryDailyReport from './reports/country_daily/country_daily_report';
+import Report from './reports/daily_total/DailyReport';
+import CountryReport from './reports/country/CountryReport';
+import CountryDailyReport from './reports/country_daily/CountryDailyReport';
 
 class App extends Component {
     componentDidMount() {
