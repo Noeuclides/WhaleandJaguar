@@ -13,7 +13,7 @@ import {
 } from './types';
 
 // REGISTER USER
-export const register = ({ username, email, password }) => async dispatch => {
+export const register = ({ first_name, last_name, username, email, password }) => async dispatch => {
   // Headers
   const config = {
     headers: {
@@ -22,7 +22,7 @@ export const register = ({ username, email, password }) => async dispatch => {
   };
 
   // Request Body
-  const body = JSON.stringify({ username, email, password });
+  const body = JSON.stringify({ first_name, last_name, username, email, password });
 
   try {
     const res = await axios.post('/api/register', body, config);

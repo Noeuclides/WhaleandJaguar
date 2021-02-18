@@ -33,6 +33,20 @@ class RegisterForm extends Component {
             className='ui form'
           >
             <Field
+              name='first_name'
+              type='text'
+              component={this.renderField}
+              label='First name'
+              validate={[required, minLength3, maxLength15]}
+            />
+            <Field
+              name='last_name'
+              type='text'
+              component={this.renderField}
+              label='Last name'
+              validate={[required, minLength3, maxLength15]}
+            />
+            <Field
               name='username'
               type='text'
               component={this.renderField}
