@@ -7,32 +7,40 @@ from apps.covid_api.api.serializers import (
 )
 
 
-class DailyReportsAPIView(APIView):
+class BaseAPIView(APIView):
+    @staticmethod
+    def serializer_instance(query, serializer):
+        if query.json():
+            return serializer(query.json()[0])
+        return serializer()
+
+
+class DailyReportsAPIView(BaseAPIView):
 
     def get(self, request: Request) -> Response:
         date = request.query_params.getlist('date')[0]
         instance = COVIDAPI(query_date=date)
-        query = instance.get_daily_report_totals()
-        api_serielizer = DailyReportSerializer(query.json()[0])
+        api_serielizer = self.serializer_instance(
+            instance.get_daily_report_totals(), DailyReportSerializer)
         return Response(api_serielizer.data)
 
 
-class CountryDataByCodeAPIView(APIView):
+class CountryDataByCodeAPIView(BaseAPIView):
 
     def get(self, request: Request) -> Response:
         code = request.query_params.getlist('code')[0]
         instance = COVIDAPI(country_code=code)
-        query = instance.get_lastest_country_data_by_code()
-        api_serielizer = CountryReportSerializer(query.json()[0])
+        api_serielizer = self.serializer_instance(
+            instance.get_lastest_country_data_by_code(), CountryReportSerializer)
         return Response(api_serielizer.data)
 
 
-class CountryDailyReportAPIView(APIView):
+class CountryDailyReportAPIView(BaseAPIView):
 
     def get(self, request: Request) -> Response:
         code = request.query_params.getlist('code')[0]
         date = request.query_params.getlist('date')[0]
         instance = COVIDAPI(query_date=date, country_code=code)
-        query = instance.get_daily_report_by_country_code()
-        api_serielizer = CountryDailyReportSerializer(query.json()[0])
+        api_serielizer = self.serializer_instance(
+            instance.get_daily_report_by_country_code(), CountryDailyReportSerializer)
         return Response(api_serielizer.data)
